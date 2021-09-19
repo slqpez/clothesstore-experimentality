@@ -17,7 +17,7 @@ nav{
   margin-left: -2.9em;
   height:100vh;
   z-index: 2;
-  padding:7em 4em;
+  padding:7em 8em;
   box-shadow: 1px 1px 1px 1px rgba(222, 222, 222,.3);
 }
 
@@ -41,4 +41,53 @@ ul{
 
 .show{
   display: block;
+}
+
+@media screen and (min-width: 1200px){
+  nav{
+    display: block;
+    width: 100%;
+    height:100px;
+    background: var(--black);
+    z-index: 0;
+    margin: 0;
+    margin-top: 20px;
+    position: static;
+    padding:3em 3em;
+    display: flex;
+    align-items: center;
+    order: 3;
+  }
+
+  ul{
+    flex-direction: row;
+    justify-content: center;
+    gap: .7em;
+    width: 100%;
+    height:60px;
+ 
+  }
+
+ li{
+   height:100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ li:not(:last-of-type){
+  border-right: 1px solid #fff;
+}
+
+
+  a{
+    color: var(--white);
+    font-size: 1.6em;
+    width:100%;
+    padding: 0 1.5em;
+  }
+  
+  .closeBtn{
+    display: none;
+  }
 }
