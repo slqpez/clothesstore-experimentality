@@ -1,0 +1,65 @@
+.bannerContainer{
+  background: url("../../assets/images/banner-principal-mobile.png") no-repeat;
+  width:100%;
+  background-size:cover;
+  height:562px;
+  position: relative;
+}
+
+.sliderContainer{
+  position: absolute;
+  width: 100%;
+  padding:1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  display:flex;
+  justify-content: space-between;
+}
+
+.btnSlider{
+  width: 59px;
+  height: 59px;
+  border: none;
+  outline: none;
+}
+
+.btnRight{
+  background:  rgba(96, 96, 96,.3) url("../../assets/icons/Trazado 75.svg") no-repeat;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  background-position: center;
+
+  background-size:19px 38px;
+}
+
+.btnLeft{
+  
+  background:  rgba(96, 96, 96,.3)  url("../../assets/icons/Trazado 75.svg") no-repeat;
+  background-size:19px 38px;
+  background-position: center;
+}
+
+.changeContainer{
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap:5px;
+}
+
+.btnChange{
+  border-radius: 50%;
+  width: 37px;
+  height: 37px;
+  border: none;
+  outline: none;
+}
+
+.btnLeftCahnge{
+  background: var(--white);
+}
+
+.btnRightChange{
+  background: var(--white);
+  opacity: 0.44;
+}

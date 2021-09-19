@@ -1,0 +1,26 @@
+.btn{
+  position: relative;
+  width:67px;
+  height:8px;
+  background:var(--hard-grey);
+}
+
+.btn::after{
+  content:"";
+  width: 67px;
+  display:block;
+  height:8px;
+  background:var(--hard-grey);
+  position: absolute;
+  top: 20px;
+}
+
+.btn::before{
+  content:"";
+  display:block;
+  width: 67px;
+  height:8px;
+  background:var(--hard-grey);
+  position: absolute;
+  top: 40px;
+}

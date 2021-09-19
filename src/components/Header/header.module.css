@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+header{
+  padding:43px 42px;
+  display:flex;
+  max-width:100vw;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.brand{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 80px;
+  line-height: 40px;
+  font-weight: 500;
+  margin-left: -90px;
+}
+
+.brandContainer{
+  height:78px;
+}
+
+.formContainer{
+  width:100%;
+}
+
+form{
+  width: 100%;
+  display:flex;
+}
+
+input{
+  background:#EEEEEE;
+  color: #6B6B6B;
+  width:90%;
+  max-width:722px;
+  padding:17px 25px;
+  font-size: 30px;
+  outline:none;
+  border:none;
+}
+
+.btnSearch{
+  width:10%;
+  padding: 30px 30px;
+  background:#DEDEDE url("../../assets/icons/Icon ionic-ios-search.svg") no-repeat;
+  background-size: 40px;
+  background-position:center;
+  border: none;
+  cursor: pointer;
+}

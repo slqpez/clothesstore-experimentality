@@ -1,10 +1,13 @@
 import React from 'react'
+import Header from "./components/Header/Header"
+import Body from "./Body/Body"
 import "./App.css"
 
 function App() {
   return (
-    <div>
-      <h1>ClothesStore</h1>
+    <div className="App">
+    <Header/>  
+    <Body/>
     </div>
   )
 }

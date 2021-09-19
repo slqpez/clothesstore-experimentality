@@ -1,0 +1,44 @@
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.4em;
+  color: var(--black);
+}
+
+nav{
+  background: var(--white);
+  display: none;
+  width: 90%;
+  position: absolute;
+  top: 0px;
+  margin-left: -2.9em;
+  height:100vh;
+  z-index: 2;
+  padding:7em 4em;
+  box-shadow: 1px 1px 1px 1px rgba(222, 222, 222,.3);
+}
+
+ul{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap:30px;
+}
+
+.closeBtn{
+  width: 46px;
+  height: 46px;
+  border: none;
+  background: url("../../assets/icons/Icon ionic-ios-close-circle-outline.svg");
+  background-size:contain;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+.show{
+  display: block;
+}
