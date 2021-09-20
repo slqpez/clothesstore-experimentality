@@ -1,15 +1,20 @@
-import React from 'react'
-import Header from "./components/Header/Header"
-import Body from "./Body/Body"
-import "./App.css"
+import React from "react";
+import Header from "./components/Header/Header";
+import Body from "./components/Body/Body";
+import Footer from "./components/Footer/Footer";
+import "./App.css";
+import ProductsProvider from "./context/productsContext";
 
 function App() {
   return (
     <div className="App">
-    <Header/>  
-    <Body/>
+      <ProductsProvider>
+        <Header />
+        <Body />
+      </ProductsProvider>
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
