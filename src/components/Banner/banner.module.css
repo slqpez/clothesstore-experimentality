@@ -4,12 +4,13 @@
   background-size:cover;
   height:562px;
   position: relative;
+  overflow: hidden;
 }
 
 .sliderContainer{
   position: absolute;
   width: 100%;
-  padding:1.5em;
+  padding:1.8em;
   top: 50%;
   transform: translateY(-50%);
   display:flex;

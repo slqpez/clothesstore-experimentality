@@ -1,0 +1,40 @@
+.bannersContainer{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3em;
+  gap: 2em;
+  justify-content: center;
+}
+
+.img{
+  object-fit: contain;
+width: 100%;
+}
+
+.bannerCard{
+  position: relative;
+}
+
+.title{
+  font-size: 3.3em;
+  width: 100%;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 2px 2px 2px #000;
+  position: absolute;
+  bottom: 70px;
+  text-align: center;
+  color: var(--white)
+}
+
+@media screen and (max-width:730px){
+  .title {
+    font-size: 1.9em;
+  }
+}
+
+@media screen and (min-width:1814px){
+  .bannersContainer {
+    margin: 5em 3em;
+  }
+}
