@@ -1,0 +1,24 @@
+summary {
+  list-style: none;
+  border-bottom:1px solid white !important;
+  padding:2em;
+  font-weight: bold;
+  background:  url("../../assets/icons/moresvg.svg") no-repeat;
+  background-position: 95% 50%;
+}
+
+
+
+details ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+details ul  li{
+  list-style: none;
+}
+
+details ul  li:first-child{
+  margin-top: 1em;
+}

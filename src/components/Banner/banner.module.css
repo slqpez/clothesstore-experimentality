@@ -1,7 +1,7 @@
 .bannerContainer{
   background: url("../../assets/images/banner-principal-mobile.png") no-repeat;
-  width:100%;
-  background-size:cover;
+
+  background-size: 100vw 562px;
   height:562px;
   position: relative;
   overflow: hidden;

@@ -1,7 +1,7 @@
-li{
+nav ul li{
   list-style: none;
 }
-a{
+nav ul li a{
   text-decoration: none;
   font-weight: bold;
   font-size: 1.4em;
@@ -21,7 +21,7 @@ nav{
   box-shadow: 1px 1px 1px 1px rgba(222, 222, 222,.3);
 }
 
-ul{
+nav ul{
   display: flex;
   position: relative;
   flex-direction: column;
@@ -59,7 +59,7 @@ ul{
     order: 3;
   }
 
-  ul{
+  nav ul{
     flex-direction: row;
     justify-content: center;
     gap: .7em;
@@ -68,19 +68,19 @@ ul{
  
   }
 
- li{
+  nav  ul li{
    height:100%;
    display: flex;
    align-items: center;
    justify-content: center;
  }
 
- li:not(:last-of-type){
+ nav ul li:not(:last-of-type){
   border-right: 1px solid #fff;
 }
 
 
-  a{
+  nav ul li a{
     color: var(--white);
     font-size: 1.6em;
     width:100%;
