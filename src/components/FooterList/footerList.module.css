@@ -5,6 +5,10 @@ summary {
   font-weight: bold;
   background:  url("../../assets/icons/moresvg.svg") no-repeat;
   background-position: 95% 50%;
+  cursor: pointer;
+}
+summary:hover{
+  color: #5B17AA;
 }
 
 
@@ -17,8 +21,11 @@ details ul {
 
 details ul  li{
   list-style: none;
+  cursor: pointer;
 }
-
+details ul  li:hover{
+  color: #5B17AA;
+}
 details ul  li:first-child{
   margin-top: 1em;
 }

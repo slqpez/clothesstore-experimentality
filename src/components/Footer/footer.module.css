@@ -5,13 +5,19 @@ footer {
   font-size: 1.5em;
   padding-bottom: 2em;
 }
-.footerInfo{
-  display:flex;
+
+.footerInfo {
+  display: flex;
   flex-direction: column;
 }
 
-.listDesktop{
-display: none;
+.listDesktop {
+  display: none;
+}
+
+.listDesktop li:hover {
+  color: #5B17AA;
+  cursor: pointer;
 }
 
 .iconsContainer {
@@ -20,6 +26,11 @@ display: none;
   gap: 1em;
   margin-top: 1em;
   flex-wrap: wrap;
+}
+
+.iconsContainer img:hover {
+  filter: invert(10%) sepia(90%) saturate(3798%) hue-rotate(265deg) brightness(106%) contrast(103%);
+  cursor: pointer;
 }
 
 .iconsContainer div:first-child {
@@ -45,11 +56,10 @@ display: none;
 }
 
 @media screen and (min-width:1200px) {
-
-  footer{
+  footer {
     padding-bottom: .8em;
   }
-  .footerInfo{
+  .footerInfo {
     flex-direction: row;
     justify-content: center;
     gap: 2em;
@@ -58,45 +68,41 @@ display: none;
     display: flex;
     gap: 6em;
   }
-
-  .listDesktop ul{
+  .listDesktop ul {
     display: flex;
     flex-direction: column;
     gap: .6em;
     margin-top: 2em;
   }
-  .listDesktop li{
+  .listDesktop li {
     list-style: none;
   }
-  .listMobile{
+  .listMobile {
     display: none;
   }
-
-  .iconsContainer{
+  .iconsContainer {
     flex-wrap: nowrap;
   }
   .socialContainer {
-  margin-top: 0;
-}
-
-.copy {
-  font-size:1em;
-  width: 100%;
-  margin-top: 4em;
-  margin-right: 3em;
-  text-align: center;
-  border-top: 1px solid white;
-  padding-top: .8em;
-}
+    margin-top: 0;
+  }
+  .copy {
+    font-size: 1em;
+    width: 100%;
+    margin-top: 4em;
+    margin-right: 3em;
+    text-align: center;
+    border-top: 1px solid white;
+    padding-top: .8em;
+  }
 }
 
 @media screen and (min-width:1400px) {
-
-  footer{
+  footer {
     padding: 4em 6em;
     padding-bottom: .8em;
   }
-  .footerInfo{
+  .footerInfo {
     flex-direction: row;
     justify-content: center;
     gap: 8em;

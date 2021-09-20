@@ -86,6 +86,10 @@ nav ul{
     width:100%;
     padding: 0 1.5em;
   }
+
+  nav ul li a:hover{
+    color: #5B17AA;
+  }
   
   .closeBtn{
     display: none;

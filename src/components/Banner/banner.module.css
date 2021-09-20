@@ -1,10 +1,9 @@
 .bannerContainer{
   background: url("../../assets/images/banner-principal-mobile.png") no-repeat;
-
   background-size: 100vw 562px;
   height:562px;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .sliderContainer{
@@ -22,6 +21,11 @@
   height: 59px;
   border: none;
   outline: none;
+  cursor: pointer;
+}
+
+.btnSlider:hover{
+  background-color: rgba(96, 96, 96,.5);
 }
 
 .btnRight{
@@ -53,6 +57,7 @@
   height: 37px;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .btnLeftCahnge{
