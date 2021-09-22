@@ -51,7 +51,6 @@ function Header() {
 
   return (
     <header>
-      <ToastContainer />
       <BurguerMenu handleShow={handleShow} />
       <div className={headerStyles.brandContainer}>
         <h1 className={headerStyles.brand} onClick={handleBrand}>
@@ -81,6 +80,7 @@ function Header() {
         </form>
       </div>
       <Nav show={show} setShow={setShow}></Nav>
+      <ToastContainer />
     </header>
   );
 }

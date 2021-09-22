@@ -2,9 +2,9 @@ import React from "react";
 import ProductCard from "../ProductCard/ProductCard";
 import productsListStyles from "./productsList.module.css"
 
-function ProductsList({ products }) {
+function ProductsList({ products, slider }) {
   return (
-    <div className={productsListStyles.productsList}>
+    <div className={!slider?productsListStyles.productsList:productsListStyles.productsSlider}>
       {products.map((product) => (
         <ProductCard
           key={product.id}

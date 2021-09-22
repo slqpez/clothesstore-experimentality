@@ -30,7 +30,7 @@ function ProductsPage() {
         No se encontraron productos para esa búsqueda.
       </p>
     );
-console.log(offset)
+    
   const handlePrev = () => {
     setOffset((o) => o - 20);
     history.push(`/products/${searchProduct}-from-${offset - 20}`);

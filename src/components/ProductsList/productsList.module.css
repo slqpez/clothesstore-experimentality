@@ -1,6 +1,24 @@
-.productsList{
-  display:flex;
+.productsList {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 4em;
+}
+
+.productsSlider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  gap: 3em;
+  width: 100vw;
+  max-width:1925px;
+  height: 562px;
+}
+
+@media screen and (min-width:800px){
+  .productsSlider{
+  padding: 0 4em;
+  }
 }

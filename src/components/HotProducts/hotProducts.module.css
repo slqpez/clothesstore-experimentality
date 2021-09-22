@@ -1,0 +1,52 @@
+.hotProductsContainer{
+  text-align: center;
+  justify-content: center;
+  width:100%;
+  padding: 3em .5em;
+  padding-bottom: 5em;
+  position: relative;
+  overflow: hidden;
+}
+
+.hotProductsContainer h2{
+  font-size: 44px;
+  margin-bottom: 2em;
+}
+
+.sliderContainer{
+  position: absolute;
+  width:calc(100% - 2em);
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.btnSlider{
+  width:36px;
+  height:76px;
+  border: none;
+  cursor: pointer;
+}
+
+.btnLeft{
+  background: url("../../assets/icons/Trazado 49.svg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  left:2em;
+}
+
+.btnRight{
+  background: url("../../assets/icons/Trazado 50.svg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  right:0px
+
+}
+
+.loading{
+  height: 10px;
+  margin-bottom: 50px;
+  font-size: 1.8em;
+  font-weight: bold;
+}
