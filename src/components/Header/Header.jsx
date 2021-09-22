@@ -23,6 +23,10 @@ function Header() {
     setInputValue(e.target.value);
   };
 
+  const handleBrand = (e) => {
+    history.push("/")
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     history.push(`/products/${inputValue}-from-0`);
@@ -32,8 +36,8 @@ function Header() {
     <header>
       <BurguerMenu handleShow={handleShow} />
       <div className={headerStyles.brandContainer}>
-        <h1 className={headerStyles.brand}>CLOTHESSTORE</h1>
-        <h1 className={headerStyles.mobileBrand}>CS</h1>
+        <h1 className={headerStyles.brand} onClick={handleBrand}>CLOTHESSTORE</h1>
+        <h1 className={headerStyles.mobileBrand} onClick={handleBrand}>CS</h1>
       </div>
       <div className={headerStyles.iconsContainer}>
         <img src={cart} alt="Cart shop" />

@@ -4,6 +4,7 @@
   height:8px;
   background:var(--hard-grey);
   margin-left: 42px;
+  cursor: pointer;
 }
 
 .btn::after{

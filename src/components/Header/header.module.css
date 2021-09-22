@@ -16,10 +16,12 @@ header {
   text-align: left;
   position: relative;
   left:-60px;
+  cursor: pointer;
 }
 
 .mobileBrand {
   display: none;
+  cursor: pointer;
 }
 
 .brandContainer {
