@@ -4,7 +4,7 @@ import productsListStyles from "./productsList.module.css"
 
 function ProductsList({ products, slider }) {
   return (
-    <div className={!slider?productsListStyles.productsList:productsListStyles.productsSlider}>
+    <div className={!slider?productsListStyles.productsList:productsListStyles.productsSlider} id="productsList">
       {products.map((product) => (
         <ProductCard
           key={product.id}

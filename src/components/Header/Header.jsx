@@ -111,7 +111,7 @@ function Header() {
             onChange={handleInput}
             value={inputValue}
           />
-          <button className={headerStyles.btnSearch}></button>
+          <button className={headerStyles.btnSearch} id="btn-search"></button>
         </form>
       </div>
       <Nav show={show} setShow={setShow}></Nav>
