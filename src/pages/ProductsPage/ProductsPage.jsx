@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ProductsList from "../../components/ProductsList/ProductsList";
 import useProducts from "../../hooks/useProducts";
 import { useParams, useHistory} from "react-router-dom";
@@ -9,7 +9,14 @@ function ProductsPage() {
 
   const { search } = useParams();
   const history = useHistory()
-  const searchProduct = search.split("-")[0];
+  if(!search){
+    history.push("/products/vestido-from-0")
+  }
+
+  console.log(search)
+
+  const searchProduct = search?search.split("-")[0]:"vestido";
+
   const { products, loading, error } = useProducts(searchProduct, offset);
 
   if (loading) return <p>Cargando productos...</p>;

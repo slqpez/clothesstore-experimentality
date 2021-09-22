@@ -12,7 +12,6 @@ function useProducts(productName, offset) {
   useEffect(() => {
     setLoading(true);
     setError(null);
-
     getProductsByName(productName, offset)
     .then((data) =>{
       dispatch({
