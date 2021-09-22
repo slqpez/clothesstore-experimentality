@@ -3,15 +3,15 @@ import headerStyles from "./header.module.css";
 import cart from "../../assets/icons/icon-cart.svg";
 import avatar from "../../assets/icons/icon-user.svg";
 import Nav from "../Nav/Nav";
+import { useHistory } from "react-router-dom";
 import BurguerMenu from "../BurguerMenu/BurguerMenu";
 import useProducts from "../../hooks/useProducts";
 
 function Header() {
+
   const [inputValue, setInputValue] = useState("");
-  const [productName, setProductName] = useState("")
 
-  const { products } = useProducts(productName);
-
+  const history = useHistory();
 
   const [show, setShow] = useState(false);
 
@@ -23,12 +23,10 @@ function Header() {
     setInputValue(e.target.value);
   };
 
-  const handleSubmit =  (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setProductName(inputValue)
+    history.push(`/products/${inputValue}-from-0`);
   };
-
-console.log({products})
 
   return (
     <header>

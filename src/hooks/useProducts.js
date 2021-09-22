@@ -2,7 +2,8 @@ import { useState, useEffect, useContext } from "react";
 import { ProductsContext } from "../context/productsContext";
 import {getProductsByName} from "../services/products";
 
-function useProducts(productName) {
+function useProducts(productName, offset) {
+  
   const [{ products }, dispatch] = useContext(ProductsContext);
 
   const [loading, setLoading] = useState(false);
@@ -12,7 +13,7 @@ function useProducts(productName) {
     setLoading(true);
     setError(null);
 
-    getProductsByName(productName)
+    getProductsByName(productName, offset)
     .then((data) =>{
       dispatch({
         type: "FETCH_PRODUCTS",
@@ -26,7 +27,7 @@ function useProducts(productName) {
     })
      
     
-  }, [productName]);
+  }, [productName, offset]);
 
   return { products, loading, error };
 }

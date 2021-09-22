@@ -10,7 +10,7 @@ function Body() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/products">
+        <Route exact path="/products/:search">
           <ProductsPage />
         </Route>
       </Switch>

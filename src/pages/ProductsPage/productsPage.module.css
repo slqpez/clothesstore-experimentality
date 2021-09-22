@@ -1,0 +1,46 @@
+.productsPageContainer{
+  display:flex;
+  padding: 5em 0;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.productsPageContainer .btnsContainer{
+  display:flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.btnsPagination{
+  border: none;
+  padding: 1em 2em;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+.btnPrev{
+  background: rgb(137, 110, 150) url("../../assets/icons/leftarrow.svg") no-repeat;
+  background-size: 35px;
+  background-position: 0% 50%;
+}
+
+.btnNext{
+  background:  rgb(137, 110, 150)  url("../../assets/icons/rightarrow.svg") no-repeat;
+  background-size: 35px;
+  background-position: 100% 50%;
+}
+
+.btnPrev:hover{
+  background: rgba(137, 110, 150,.9) url("../../assets/icons/leftarrow.svg") no-repeat;
+  background-size: 35px;
+  background-position: 0% 50%;
+}
+
+.btnNext:hover{
+  background:  rgba(137, 110, 150,.9)  url("../../assets/icons/rightarrow.svg") no-repeat;
+  background-size: 35px;
+  background-position: 100% 50%;
+}

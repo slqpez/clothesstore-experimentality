@@ -1,0 +1,94 @@
+.productCard {
+  width: 337px;
+  height: 562px;
+  border: 1px solid rgba(104, 103, 103, 0.2);
+  position: relative;
+}
+
+
+.discount{
+  background:var(--purple);
+  width:87px;
+  color: var(--white);
+  padding:.5em 1em;
+  text-align: center;
+  font-size: 1.4em;
+  position: absolute;
+  top: 11px;
+  left:14px;
+}
+
+.imageContainer {
+  width: 335px;
+  height: 320px;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.infoCardContainer {
+  background-color: #F4F4F4;
+  height: calc(100% - 320px);
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  position: relative;
+}
+
+.infoCardContainer h3 {
+  font-size: 1.4em;
+  word-wrap: wrap;
+  width: 273px;
+  height:54px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.infoCardContainer .price {
+  color: #5B17AA;
+  font-weight: 900;
+  font-size: 1.5em;
+}
+
+.infoCardContainer .btnAdd {
+  background: #000 url("../../assets/icons/icon-cart-white.svg") no-repeat;
+  background-size:18px;
+  background-position:13% 50%;
+  width: 271px;
+  color: #FFFFFF;
+  font-size: 1.2em;
+  padding: .5em 2em;
+  border: none;
+  position: absolute;
+  bottom: 2em;
+  cursor: pointer;
+}
+
+.infoCardContainer .btnAdd:hover {
+  background-color: rgba(0, 0, 0, .9);
+}
+
+.pricesContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:10px;
+}
+
+.originalPrice, .nodiscount{
+  font-weight: 900;
+  font-size: 1.1em;
+  color: var(--hard-grey);
+}
+
+.originalPrice{
+  text-decoration: line-through;
+}
