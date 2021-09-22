@@ -1,11 +1,15 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import headerStyles from "./header.module.css";
 import cart from "../../assets/icons/icon-cart.svg";
 import avatar from "../../assets/icons/icon-user.svg";
 import Nav from "../Nav/Nav";
 import { useHistory } from "react-router-dom";
 import BurguerMenu from "../BurguerMenu/BurguerMenu";
-import useProducts from "../../hooks/useProducts";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
+const customId = "custom-id-yes";
 
 function Header() {
 
@@ -24,20 +28,38 @@ function Header() {
   };
 
   const handleBrand = (e) => {
-    history.push("/")
+    history.push("/");
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    history.push(`/products/${inputValue}-from-0`);
+    if (!inputValue) {
+      toast.info("No ingresaste valor de búsqueda.", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        toastId: customId
+        })
+    } else {
+      history.push(`/products/${inputValue}-from-0`);
+    }
   };
 
   return (
     <header>
+      <ToastContainer />
       <BurguerMenu handleShow={handleShow} />
       <div className={headerStyles.brandContainer}>
-        <h1 className={headerStyles.brand} onClick={handleBrand}>CLOTHESSTORE</h1>
-        <h1 className={headerStyles.mobileBrand} onClick={handleBrand}>CS</h1>
+        <h1 className={headerStyles.brand} onClick={handleBrand}>
+          CLOTHESSTORE
+        </h1>
+        <h1 className={headerStyles.mobileBrand} onClick={handleBrand}>
+          CS
+        </h1>
       </div>
       <div className={headerStyles.iconsContainer}>
         <img src={cart} alt="Cart shop" />
