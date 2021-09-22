@@ -1,0 +1,30 @@
+.cartList {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  background-color: rgba(255, 255, 255, .9);
+  padding: 1.2em;
+  z-index: 1;
+  top: 0px;
+  right: 60px
+}
+
+.emptyCart {
+  background-color: var(--purple);
+  color: rgba(255, 255, 255);
+  margin-bottom: 1em;
+  padding: .5em;
+  border: none;
+  cursor: pointer;
+}
+
+.emptyCart:hover {
+  background-color: rgba(91, 23, 170, .9);
+}
+
+.notProducts {
+  font-style: italic;
+  font-weight: bold;
+  width:150px;
+}

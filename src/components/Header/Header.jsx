@@ -1,23 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import headerStyles from "./header.module.css";
 import cart from "../../assets/icons/icon-cart.svg";
 import avatar from "../../assets/icons/icon-user.svg";
 import Nav from "../Nav/Nav";
 import { useHistory } from "react-router-dom";
 import BurguerMenu from "../BurguerMenu/BurguerMenu";
+import CartList from "../CartList/CartList";
+import useCartProducts from "../../hooks/useCartProducts";
+import { ProductsContext } from "../../context/productsContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 
 const customId = "custom-id-yes";
 
 function Header() {
-
   const [inputValue, setInputValue] = useState("");
+  const [cartDeleted, setCartDeleted] = useState(false)
+
+  const { cartProducts } = useCartProducts(cartDeleted);
+  const [state, dispatch] = useContext(ProductsContext);
 
   const history = useHistory();
 
   const [show, setShow] = useState(false);
+  const [showCart, setShowCart] = useState(false);
 
   const handleShow = () => {
     setShow(true);
@@ -27,9 +33,28 @@ function Header() {
     setInputValue(e.target.value);
   };
 
-  const handleBrand = (e) => {
+  const handleBrand = () => {
     history.push("/");
   };
+
+  const handleCart = () => {
+    setShowCart(!showCart);
+  };
+
+  const handleEmptyCart=()=>{
+    dispatch({type:"DELETE_ALL_PRODUCTS_FROM_CART"})
+    window.localStorage.clear()
+    setCartDeleted(!cartDeleted)
+  }
+
+  const handleDeleteProduct=(e)=>{
+    const id  = e.target.getAttribute("data-id")
+    dispatch({ type: "DELETE_PRODUCT_FROM_CART", payload: id });
+    const products = JSON.parse(window.localStorage.getItem("cart-products"))
+    const newProducts = products.filter(product => product.id !== id)
+   window.localStorage.setItem("cart-products", JSON.stringify(newProducts))
+    setCartDeleted(!cartDeleted)
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -42,8 +67,8 @@ function Header() {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        toastId: customId
-        })
+        toastId: customId,
+      });
     } else {
       history.push(`/products/${inputValue}-from-0`);
     }
@@ -61,7 +86,17 @@ function Header() {
         </h1>
       </div>
       <div className={headerStyles.iconsContainer}>
-        <img src={cart} alt="Cart shop" />
+        <div className={headerStyles.cartContainer}>
+          <span className={headerStyles.productsNumber} onClick={handleCart}>{cartProducts.length}</span>
+          <img src={cart} alt="Cart shop" onClick={handleCart} />
+          <CartList
+            handleCart={showCart}
+            cartProducts={cartProducts}
+            handleEmptyCart={handleEmptyCart}
+            handleDeleteProduct={handleDeleteProduct}
+          ></CartList>
+        </div>
+
         <div className={headerStyles.sessionContainer}>
           <img src={avatar} alt="User avatar" />
           <button className={headerStyles.btnSession}>Iniciar sesión</button>

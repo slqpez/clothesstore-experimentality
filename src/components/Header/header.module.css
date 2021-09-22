@@ -69,10 +69,31 @@ input {
 
 .iconsContainer{
   margin-right: 42px;
+  position: relative;
 }
 
-.iconsContainer img:hover{
-  filter: invert(10%) sepia(90%) saturate(3798%) hue-rotate(265deg) brightness(106%) contrast(103%);
+.productsNumber{
+  background: #5B17AA;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  font-size: 1em;
+  position: absolute;
+  right:-5px;
+  top:15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.cartContainer{
+  position: relative;
+  display: flex;
+}
+
+.iconsContainer >div>img{
+
   cursor: pointer;
 
 }

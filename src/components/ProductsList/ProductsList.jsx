@@ -12,6 +12,7 @@ function ProductsList({ products, slider }) {
           price={product.price}
           image={product.thumbnail}
           original_price={product.original_price}
+          id={product.id}
         />
       ))}
     </div>
