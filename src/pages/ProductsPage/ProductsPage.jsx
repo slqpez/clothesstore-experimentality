@@ -19,10 +19,10 @@ function ProductsPage() {
 
   const { products, loading, error } = useProducts(searchProduct, offset);
 
-  if (loading) return <p>Cargando productos...</p>;
+  if (loading) return <p className={productsPageStyles.infoPage}>Cargando productos...</p>;
 
   if (products.length === 0)
-    return <p>No se encontraron productos para esa búsqueda.</p>;
+    return <p className={productsPageStyles.infoPage}a>No se encontraron productos para esa búsqueda.</p>;
 
   const handlePrev = () => {
     setOffset((o) => o - 20);

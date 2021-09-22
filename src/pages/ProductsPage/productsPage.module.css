@@ -5,6 +5,12 @@
   gap: 3em;
 }
 
+.infoPage{
+  text-align: center;
+  margin: 8em auto;
+  font-size: 1.5em;
+}
+
 .productsPageContainer .btnsContainer{
   display:flex;
   justify-content: center;
