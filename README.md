@@ -30,6 +30,7 @@ The initial setup was built with [Vite.js](https://vitejs.dev/).
   <li>Add product to cart</li>
   <li>Delete product from cart</li>
   <li>Responsive design</li>
+  <li>Pagination</li>
   <li>Get products by cathegory in home page</li>
 </ul>
 
