@@ -16,7 +16,7 @@ The initial setup was built with [Vite.js](https://vitejs.dev/).
 
 #### To run project.
 ```bash
- npm run build
+ npm run dev
 ```
 
 #### To run tests. (Only search product E2E test at the moment).
