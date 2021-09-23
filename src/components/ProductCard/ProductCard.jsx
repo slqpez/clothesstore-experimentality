@@ -42,8 +42,6 @@ function ProductCard({
     }
   };
 
-
-  console.log(quantity)
   return (
     <div className={styles.productCard} id="productCard">
       {original_price ? (
